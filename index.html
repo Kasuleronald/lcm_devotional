@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCM Devotional | Spiritual Nourishment</title>
+    <link rel="icon" type="image/png" href="images/lcm_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Responsive Header -->
+    <header class="app-header">
+        <div class="header-inner">
+            <!-- Mobile: Hamburger (Hidden on PC) -->
+            <div class="menu-btn" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+
+            <!-- Logo & Title (Centered on Mobile, Left on PC) -->
+            <div class="header-brand">
+                <img src="images/lcm_logo.png" alt="LCM Logo" class="header-logo">
+                <div class="brand-text">
+                    <h1>LCM Devotional</h1>
+                    <p id="display-date">Loading...</p>
+                </div>
+            </div>
+
+            <!-- PC: Menu Links (Hidden on Mobile) -->
+            <nav class="desktop-nav">
+                <a href="#">Today</a>
+                <a href="#media-section">Sermons</a>
+                <a href="#notices-section">Notices</a>
+                <a href="#">Give</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="nav-overlay" id="navOverlay">
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+        <div class="nav-links">
+            <a href="#" onclick="toggleMenu()">Today</a>
+            <a href="#media-section" onclick="toggleMenu()">Sermons</a>
+            <a href="#" onclick="toggleMenu()">Give</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        
+        <!-- DEVOTIONAL SECTION (Timed via JS) -->
+        <div id="devotional-container">
+            
+            <!-- TODAY: March 20, 2026 -->
+            <section class="card devotional-gate" id="date-20-03-2026">
+                <h2 class="theme-tag">20 March | Stillness</h2>
+                <h3>The Strength of Stillness</h3>
+                <div class="scripture-box">
+                    <p>"Be still, and know that I am God..."</p>
+                    <span>— Psalm 46:10 (KJV)</span>
+                </div>
+                <div class="reflection">
+                    <p>There is a strength found only in stillness. In the secret place, God doesn't just give you instructions; He gives you Himself. Today, step away from the noise and let your spirit reflect His peace.</p>
+                </div>
+                <div class="seed-box"><strong>Seed:</strong> Spend 15 minutes in absolute silence with God today.</div>
+            </section>
+
+            <!-- APRIL 1-7 (Hidden until midnight on respective dates) -->
+            <section class="card devotional-gate" id="date-01-04-2026" style="display:none;">
+                <h2 class="theme-tag">01 April | Purpose</h2>
+                <h3>Known Before the Foundation</h3>
+                <div class="scripture-box"><p>"Before I formed thee... I knew thee..."</p><span>— Jer 1:5</span></div>
+                <p>Your life is a deliberate act of Divine Will. You were pre-known for this assignment.</p>
+            </section>
+
+            <section class="card devotional-gate" id="date-02-04-2026" style="display:none;">
+                <h2 class="theme-tag">02 April | Faith</h2>
+                <h3>Rolling Away the Stone</h3>
+                <div class="scripture-box"><p>"Who shall roll us away the stone?"</p><span>— Mark 16:3</span></div>
+                <p>God has already handled the barrier you're worried about. Trust His timing.</p>
+            </section>
+
+            <!-- ... (Other days added here following the same ID format) ... -->
+
+            <div id="no-devotional" style="display:none; text-align:center;">
+                <h3>Resting in the Word</h3>
+                <p>New nourishment arrives at midnight.</p>
+            </div>
+        </div>
+
+        <div id="media-section">
+            <h3 class="section-label">📺 Video Sermons</h3>
+            <!-- Video Grid: 3 Cols on PC, 1 Col on Mobile -->
+            <section class="media-grid">
+                <div class="card media-item">
+                    <p class="media-title">The Power of Prayer</p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/KRmywviY60c" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="card media-item">
+                    <p class="media-title">Divine Speed</p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/KRmywviY60c" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="card media-item">
+                    <p class="media-title">Resurrection Power</p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/KRmywviY60c" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <h3 class="section-label">🎧 Audio Teachings</h3>
+            <!-- Audio Grid: 3 Cols on PC, 1 Col on Mobile -->
+            <section class="media-grid">
+                <div class="card media-item">
+                    <p class="media-title">The Secret Place</p>
+                    <audio controls class="audio-player"><source src="AUDIO_URL_1.mp3" type="audio/mpeg"></audio>
+                </div>
+                <div class="card media-item">
+                    <p class="media-title">Victory over Lack</p>
+                    <audio controls class="audio-player"><source src="AUDIO_URL_2.mp3" type="audio/mpeg"></audio>
+                </div>
+                <div class="card media-item">
+                    <p class="media-title">Walking in Grace</p>
+                    <audio controls class="audio-player"><source src="AUDIO_URL_3.mp3" type="audio/mpeg"></audio>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
